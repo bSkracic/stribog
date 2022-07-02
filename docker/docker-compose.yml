@@ -1,0 +1,32 @@
+version: "3.7"
+
+volumes:
+  dbvolume:
+    name: stribog-db-volume
+
+networks:
+  test-network:
+    external: false
+
+services:
+  db:
+    container_name: stribogdb
+    image: postgres:13.7
+    restart: on-failure
+    ports:
+      - "5432:5432"
+    volumes:
+      - stribog-db-volume
+    environment:
+      POSTGRES_USER: webber
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: stribog
+    networks:
+      - test-network
+
+  test:
+    container_name: test
+    image: busybox
+    networks:
+      - test-network
+    entrypoint: ["sleep", "infinity"]

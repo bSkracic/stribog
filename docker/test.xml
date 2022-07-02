@@ -1,0 +1,17 @@
+<nodes>
+    <node>
+        <id>0</id>
+        <name>name1</name>
+        <image>image1</image>
+    </node>
+    <node>
+        <id>1</id>
+        <name>wow</name>
+        <image>image1</image>
+    </node>
+    <node>
+        <id>2</id>
+        <name>no</name>
+        <image>image3</image>
+    </node>
+</nodes>
