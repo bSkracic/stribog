@@ -30,9 +30,10 @@ public class NodeEndpoint {
             nodeDto.setName(n.getName());
             nodeDto.setImage(n.getImage());
             nodeDto.setId(n.getId());
+            nodeDto.setContainerId(n.getContainerId());
             nodes.add(nodeDto);
         });
-        response.getNodeList().addAll(nodes);
+        response.getNode().addAll(nodes);
 
         return response;
     }
